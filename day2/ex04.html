@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form
+            action="https://api-gateway.fullstack.edu.vn/action_page.php"
+            method="GET"
+        >
+            <h1>Đăng ký</h1>
+
+            <div>
+                <label for="username">Username</label>
+                <input
+                    placeholder="nhập username..."
+                    required
+                    type="text"
+                    name="username"
+                    id="username"
+                    minlength="8"
+                />
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+
+                required<input
+                    placeholder="nhập email..."
+                    name="email"
+                    type="email"
+                    id="email"
+                />
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input
+                    placeholder="nhập password..."
+                    required
+                    type="password"
+                    name="password"
+                    id="password"
+                    minlength="8"
+                />
+            </div>
+
+            <button type="submit">Đăng ký</button>
+        </form>
+
+        <textarea name="" id="" cols="50" rows="10"></textarea>
+
+        <select name="gender" id="gender">
+            <option value="">chọn giới tính</option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+    </body>
+</html>
