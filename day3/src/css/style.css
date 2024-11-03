@@ -1,0 +1,163 @@
+/* Common Start  */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    background: #eef2f9;
+    color: #191847;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Common End  */
+
+/* payment */
+
+.payment {
+    display: flex;
+    justify-content: space-between;
+    padding: 82px;
+    margin: calc((100vh - 661px) / 2) auto;
+    width: 887px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.payment__media {
+    width: 249px;
+}
+
+.payment__media--img {
+    width: 100%;
+}
+
+.payment__content {
+    width: 442px;
+}
+.payment__freeship {
+    padding: 4px 8px;
+    border-radius: 999px;
+
+    background: #191847;
+    color: #fff;
+
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+}
+
+.payment__heading {
+    margin-top: 16px;
+
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
+}
+
+.payment__price {
+    margin-top: 30px;
+}
+
+.payment__price--qnt {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.payment__price--original {
+    font-family: "Roboto", serif;
+    font-size: 18px;
+    line-height: 21.09px;
+    text-decoration: line-through;
+}
+
+.payment__price--discount {
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 700;
+}
+
+.payment__price--desc {
+    font-size: 14px;
+    line-height: 21px;
+    opacity: 0.6;
+}
+
+.payment__button {
+    padding: 16px;
+    width: 100%;
+    line-height: 27px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: none;
+    background: #4788e9;
+    box-shadow: 0 7px 0 0 #1c57ee;
+    transition: 0.3s;
+
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.payment__button:hover {
+    background: #1c57ee;
+}
+
+.payment__stock {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 21px;
+
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.payment__stock::after {
+    position: absolute;
+    left: -21px;
+
+    display: inline-block;
+    content: "";
+    width: 13px;
+    height: 13px;
+    background: #00d98b;
+    border-radius: 50%;
+}
+
+.payment__action {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment__action--link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 213px;
+    gap: 10px;
+    padding: 16px;
+    border: 2px solid #c9c9da;
+    border-radius: 8px;
+    background: #fff;
+    transition: 0.8s;
+}
+
+.payment__action--link:hover {
+    transform: translateY(10px);
+}
+
+.payment__action--title {
+    font-size: 18px;
+}
