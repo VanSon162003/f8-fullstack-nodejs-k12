@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    color: #0e0e38;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    font-family: "Poppins", serif;
+    font-size: 16px;
+    background: #e5e7f0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Merriweather", serif;
+}
+
+/* popular */
+.popular {
+    position: relative;
+
+    max-width: 1563px;
+    margin: 216px auto;
+    padding: 62px;
+    border-radius: 26px;
+
+    background: #eff0f1;
+    box-shadow: 0 76px 27px 0 rgba(6, 27, 82, 0.1);
+}
+
+.popular::after,
+.popular::before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+
+    /* background: #e5e7f0; */
+    background: #ccc;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.popular::after {
+    bottom: -159px;
+    left: 221px;
+    width: 433px;
+    height: 410px;
+}
+
+.popular::before {
+    top: -148px;
+    right: 287px;
+    width: 310px;
+    height: 294px;
+}
+
+.popular__heading {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40.22px;
+}
+
+.navbar {
+    margin-top: 24px;
+}
+
+.navbar__list {
+    display: flex;
+    gap: 8px;
+}
+
+.navbar__item {
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.navbar__item:hover {
+    background: #ccc;
+}
+
+.navbar__item--link {
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.popular__content {
+    margin-top: 56px;
+}
+
+.popular__content--row {
+    display: flex;
+    gap: 64px;
+}
+
+.popular__content--item {
+    width: 437px;
+    padding: 24px;
+    border-radius: 32px;
+    background: #fff;
+}
+
+.popular__media--img {
+    width: 389px;
+    height: 268px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.popular__media--subimg {
+    width: 119px;
+    height: 97px;
+    object-fit: cover;
+
+    border-radius: 24px;
+}
+
+.popular__media--bottom {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+}
+
+.popular__content--bottom {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular__content--title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.popular__content-remain {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.popular__content--qnt {
+    font-weight: 500;
+    line-height: 24px;
+}
