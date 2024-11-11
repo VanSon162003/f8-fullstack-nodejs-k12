@@ -1,0 +1,171 @@
+/* common */
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    max-width: 1408px;
+    margin: 32px auto;
+    background: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar:first-child {
+    width: 208px;
+}
+
+.navbar:last-child {
+    width: 228px;
+}
+
+.navbar__item--link {
+    line-height: 18.75px;
+    color: #000;
+    transition: 0.1s;
+}
+
+.navbar__item--link:hover {
+    color: #ad5727;
+}
+
+/* media */
+
+.media {
+    margin-top: 30px;
+}
+
+.media:last-child {
+    margin-top: 96px;
+}
+
+/* about */
+
+.about {
+    margin-top: 64px;
+}
+
+.about__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__top--desc {
+    line-height: 18.75px;
+    color: #bb7e52;
+}
+
+.about__top--title {
+    margin-top: 12px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37.5px;
+}
+
+.about__list {
+    margin-top: 32px;
+    display: flex;
+    gap: 32px;
+}
+
+.about__item:nth-child(odd) {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.about__item {
+    width: 448px;
+    /* height: 896px; */
+}
+
+.about__media {
+    height: 448px;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 448px;
+}
+
+.about__img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__item--desc {
+    line-height: 18.97px;
+    color: #bb7e52;
+}
+
+.about__item--title {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42px;
+}
+
+/* footer */
+
+.footer {
+    position: relative;
+    margin-top: 129px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__form {
+    display: flex;
+    gap: 8px;
+}
+
+.footer::before {
+    position: absolute;
+    top: -32px;
+    left: 0;
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #9c9c9c;
+}
+
+.footer__input {
+    border: 1px solid #9c9c9c;
+    padding: 10px;
+}
+
+.footer__btn {
+    min-width: 99px;
+    height: 39px;
+    padding: 10px;
+    background: #3a3a3a;
+    color: #fff;
+    justify-content: s;
+    cursor: pointer;
+}
