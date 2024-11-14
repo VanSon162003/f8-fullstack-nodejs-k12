@@ -21,139 +21,345 @@
         <link rel="stylesheet" href="./asset/css/main.css" />
     </head>
     <body>
-        <header class="header container">
-            <div class="logo">
-                <h1 class="logo__heading heading">
-                    <a href="#!">Lesson<span class="header__dot">.</span></a>
-                </h1>
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="logo">
+                        <a class="logo__heading heading" href="#!"
+                            >Lesson<span class="header__dot">.</span></a
+                        >
+                    </div>
+
+                    <nav class="navbar">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#!" class="nav__link active">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#!" class="nav__link">Courses</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#!" class="nav__link">Pricing</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#!" class="nav__link">Reviews</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <button class="btn">Sign Up</button>
+                </div>
             </div>
-
-            <nav class="navbar">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#!" class="nav__link active">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#!" class="nav__link">Courses</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#!" class="nav__link">Pricing</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#!" class="nav__link">Reviews</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <button class="btn">Sign Up</button>
         </header>
 
         <main>
-            <div class="container">
-                <div class="hero">
-                    <!-- media -->
-                    <figure class="hero__media">
-                        <img
-                            src="./asset/imgs/guy-lesson.png"
-                            alt="Learn without limits and spread knowledge."
-                            class="hero__img"
-                        />
-                        <div class="hero__card">
-                            <!-- item 1 -->
-                            <div class="hero__card--item">
-                                <div class="her__card--icon">
-                                    <img
-                                        src="./asset/icons/orion-1.svg"
-                                        alt="UI/UX Design"
-                                    />
+            <!-- hero -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__inner">
+                        <!-- media -->
+                        <figure class="hero__media">
+                            <img
+                                src="./asset/imgs/guy-lesson.png"
+                                alt="Learn without limits and spread knowledge."
+                                class="hero__img"
+                            />
+                            <div class="hero__card">
+                                <!-- item 1 -->
+                                <div class="hero__card--item">
+                                    <div class="her__card--icon">
+                                        <img
+                                            src="./asset/icons/orion-1.svg"
+                                            alt="UI/UX Design"
+                                        />
+                                    </div>
+
+                                    <div class="hero__course">
+                                        <p class="hero__course--qnt">
+                                            20 Courses
+                                        </p>
+                                        <p class="hero__course--title">
+                                            UI/UX Design
+                                        </p>
+                                    </div>
                                 </div>
 
-                                <div class="hero__course">
-                                    <p class="hero__course--qnt">20 Courses</p>
-                                    <p class="hero__course--title">
-                                        UI/UX Design
+                                <!-- item 2 -->
+
+                                <div class="hero__card--item">
+                                    <div class="her__card--icon">
+                                        <img
+                                            src="./asset/icons/orion-2.svg"
+                                            alt="Development"
+                                        />
+                                    </div>
+
+                                    <div class="hero__course">
+                                        <p class="hero__course--qnt">
+                                            20 Courses
+                                        </p>
+                                        <p class="hero__course--title">
+                                            Development
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- item 3 -->
+
+                                <div class="hero__card--item">
+                                    <div class="her__card--icon">
+                                        <img
+                                            src="./asset/icons/orion.svg"
+                                            alt="Marketing"
+                                        />
+                                    </div>
+
+                                    <div class="hero__course">
+                                        <p class="hero__course--qnt">
+                                            30 Courses
+                                        </p>
+                                        <p class="hero__course--title">
+                                            Marketing
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+
+                        <!-- content -->
+
+                        <section class="hero__content">
+                            <h1 class="hero__heading heading">
+                                Learn without limits and spread knowledge.
+                            </h1>
+                            <p class="hero__desc">
+                                Build new skills for that “this is my year”
+                                feeling with courses, certificates, and degrees
+                                from world-class universities and companies.
+                            </p>
+
+                            <div class="hero__action">
+                                <button class="hero__btn">See Courses</button>
+                                <div class="hero__video">
+                                    <div class="hero__video__icon">
+                                        <img
+                                            src="./asset/icons/play-1.svg"
+                                            alt="Watch video"
+                                            class="hero__video--play"
+                                            title="Nhấn vào để xem video"
+                                        />
+                                    </div>
+                                    <p class="hero__video--title">
+                                        Watch Video
                                     </p>
                                 </div>
                             </div>
 
-                            <!-- item 2 -->
-
-                            <div class="hero__card--item">
-                                <div class="her__card--icon">
-                                    <img
-                                        src="./asset/icons/orion-2.svg"
-                                        alt="Development"
-                                    />
-                                </div>
-
-                                <div class="hero__course">
-                                    <p class="hero__course--qnt">20 Courses</p>
-                                    <p class="hero__course--title">
-                                        Development
+                            <div class="hero__content--bottom">
+                                <p class="hero__desc">Recent engagement</p>
+                                <div class="hero__starts">
+                                    <p class="hero__content--qnt">
+                                        <strong class="heading">50K</strong>
+                                        Students
+                                    </p>
+                                    <p class="hero__content--qnt">
+                                        <strong class="heading">70K</strong>
+                                        Courses
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- item 3 -->
-
-                            <div class="hero__card--item">
-                                <div class="her__card--icon">
-                                    <img
-                                        src="./asset/icons/orion.svg"
-                                        alt="Marketing"
-                                    />
-                                </div>
-
-                                <div class="hero__course">
-                                    <p class="hero__course--qnt">30 Courses</p>
-                                    <p class="hero__course--title">Marketing</p>
-                                </div>
-                            </div>
-                        </div>
-                    </figure>
-
-                    <!-- content -->
-
-                    <section class="hero__content">
-                        <h2 class="hero__heading heading">
-                            Learn without limits and spread knowledge.
-                        </h2>
-                        <p class="hero__desc">
-                            Build new skills for that “this is my year” feeling
-                            with courses, certificates, and degrees from
-                            world-class universities and companies.
-                        </p>
-
-                        <div class="hero__action">
-                            <button class="hero__btn">See Courses</button>
-                            <div class="hero__video">
-                                <div class="hero__video__icon">
-                                    <img
-                                        src="./asset/icons/play-1.svg"
-                                        alt="Watch video"
-                                        class="hero__video--play"
-                                        title="Nhấn vào để xem video"
-                                    />
-                                </div>
-                                <p class="hero__video--title">Watch Video</p>
-                            </div>
-                        </div>
-
-                        <div class="hero__content--bottom">
-                            <p class="hero__desc">Recent engagement</p>
-                            <div class="hero__starts">
-                                <p class="hero__content--qnt">
-                                    <strong class="heading">50K</strong>
-                                    Students
-                                </p>
-                                <p class="hero__content--qnt">
-                                    <strong class="heading">70K</strong> Courses
-                                </p>
-                            </div>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- popular -->
+            <section class="popular">
+                <div class="container">
+                    <div class="popular__inner">
+                        <div class="popular__top">
+                            <div class="popular__top--content">
+                                <h2 class="popular__top--heading heading">
+                                    Our popular courses
+                                </h2>
+                                <p class="popular__top--desc">
+                                    Build new skills with new trendy courses and
+                                    shine for the next future career.
+                                </p>
+                            </div>
+                            <div class="popular__top--action">
+                                <button class="popular__top--icon">
+                                    <svg
+                                        class="popular__top--arrow"
+                                        width="8"
+                                        height="14"
+                                        viewBox="0 0 8 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M7 1L1 7L7 13"
+                                            stroke=""
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </button>
+
+                                <button class="popular__top--icon">
+                                    <svg
+                                        class="popular__top--arrow"
+                                        width="8"
+                                        height="14"
+                                        viewBox="0 0 8 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M7 1L1 7L7 13"
+                                            stroke=""
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- card -->
+                        <div class="popular__cards">
+                            <article class="popular__card--item">
+                                <a href="#!">
+                                    <img
+                                        src="./asset/imgs/popular.png"
+                                        alt=" Basic web design"
+                                        class="popular__card--img"
+                                    />
+                                </a>
+                                <div class="popular__card--content">
+                                    <div class="popular__card--inside">
+                                        <a href="#!">
+                                            <h3 class="popular__card--title">
+                                                Basic web design
+                                            </h3>
+                                        </a>
+
+                                        <div class="popular__card--rating">
+                                            <img
+                                                src="./asset/icons/Star.svg"
+                                                alt="star"
+                                                class="popular__card--icon"
+                                            />
+                                            <span class="popular__card--qnt"
+                                                >4.5</span
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <p class="popular__card--desc">
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="popular__card--content-bottom">
+                                        <span class="popular__card--focus"
+                                            >$120.75</span
+                                        >
+                                        <button class="popular__card--btn btn">
+                                            Book Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="popular__card--item">
+                                <a href="#!">
+                                    <img
+                                        src="./asset/imgs/popular-1.png"
+                                        alt="UI/UX design"
+                                        class="popular__card--img"
+                                    />
+                                </a>
+                                <div class="popular__card--content">
+                                    <div class="popular__card--inside">
+                                        <a href="#!">
+                                            <h3 class="popular__card--title">
+                                                UI/UX design
+                                            </h3>
+                                        </a>
+
+                                        <div class="popular__card--rating">
+                                            <img
+                                                src="./asset/icons/Star.svg"
+                                                alt="star"
+                                                class="popular__card--icon"
+                                            />
+                                            <span class="popular__card--qnt"
+                                                >4.5</span
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <p class="popular__card--desc">
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="popular__card--content-bottom">
+                                        <span class="popular__card--focus"
+                                            >$120.75</span
+                                        >
+                                        <button class="popular__card--btn btn">
+                                            Book Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="popular__card--item">
+                                <a href="#!">
+                                    <img
+                                        src="./asset/imgs/popular-2.png"
+                                        alt=" Web App design"
+                                        class="popular__card--img"
+                                    />
+                                </a>
+                                <div class="popular__card--content">
+                                    <div class="popular__card--inside">
+                                        <a href="#!">
+                                            <h3 class="popular__card--title">
+                                                Web App design
+                                            </h3>
+                                        </a>
+
+                                        <div class="popular__card--rating">
+                                            <img
+                                                src="./asset/icons/Star.svg"
+                                                alt="star"
+                                                class="popular__card--icon"
+                                            />
+                                            <span class="popular__card--qnt"
+                                                >4.5</span
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <p class="popular__card--desc">
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="popular__card--content-bottom">
+                                        <span class="popular__card--focus"
+                                            >$120.75</span
+                                        >
+                                        <button class="popular__card--btn btn">
+                                            Book Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>

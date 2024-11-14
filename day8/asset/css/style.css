@@ -1,0 +1,34 @@
+/* common */
+
+:root {
+    --color-global: #5f5b53;
+    --color-heading: #171100;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--color-global);
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-family: "Poppins", serif;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    max-width: calc(1170px - 48px);
+}
+
+.heading {
+    font-family: "Sen", serif;
+}
