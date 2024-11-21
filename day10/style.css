@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1170px;
+    padding: 0;
+}
+
+.footer__container,
+.header__container {
+    width: min(1170px, 100% - 48px);
+    margin: 0 auto;
+    background: #ccc;
+    height: 100px;
+}
+
+.hero {
+    height: 100px;
+    /* background: #ccc; */
+}

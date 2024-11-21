@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .heading {
+                display: inline-block;
+                position: relative;
+                margin: 0 auto;
+            }
+
+            .heading::after,
+            .heading::before {
+                position: absolute;
+                bottom: 0;
+                display: inline-block;
+                content: "";
+            }
+
+            .heading::before {
+                right: 0;
+                left: 0;
+                border-bottom: 2px solid #ccc;
+            }
+
+            .heading::after {
+                right: -30%;
+                left: -30%;
+                border-bottom: 2px dashed #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2 class="heading">About us</h2>
+        </div>
+    </body>
+</html>
