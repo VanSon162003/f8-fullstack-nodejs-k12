@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .container {
+                width: min(1170px, 100% - 48px);
+                margin-left: auto;
+                margin-right: auto;
+                border: 1px dashed #ccc;
+                display: grid;
+
+                grid-template:
+                    "h h h h h h" 2fr
+                    "l l m m r r" 10fr
+                    "l l s s r r" 1fr
+                    "f f f f f f" 2fr;
+            }
+
+            .header,
+            .left,
+            .main,
+            .sub-content,
+            .right,
+            .footer {
+                border: 1px dashed #ccc;
+            }
+
+            .left,
+            .main,
+            .right {
+                grid-row: span 5;
+            }
+
+            .header {
+                grid-area: h;
+            }
+
+            .left {
+                grid-area: l;
+            }
+
+            .main {
+                grid-area: m;
+            }
+
+            .sub-content {
+            }
+
+            .right {
+                grid-area: r;
+            }
+
+            .footer {
+                grid-area: f;
+            }
+            .sub-content {
+                grid-area: s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">header</div>
+            <div class="left">left</div>
+            <div class="main">Main content</div>
+            <div class="sub-content">sub content</div>
+            <div class="right">right</div>
+            <div class="footer">footer</div>
+        </div>
+    </body>
+</html>
