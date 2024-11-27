@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            @keyframes move {
+                0% {
+                    top: -9px;
+                    left: -5px;
+                    rotate: 0deg;
+                }
+                24.9% {
+                    top: -9px;
+                    left: 97%;
+                    rotate: 0deg;
+                }
+                25% {
+                    rotate: 90deg;
+                }
+                49.9% {
+                    top: 97%;
+                    left: 97%;
+                    rotate: 90deg;
+                }
+                50% {
+                    rotate: 180deg;
+                }
+                74.9% {
+                    top: 97%;
+                    left: -5px;
+                    rotate: 180deg;
+                }
+                75% {
+                    rotate: 270deg;
+                }
+                99.9% {
+                    top: -9px;
+                    left: -5px;
+                    rotate: 270deg;
+                }
+                100% {
+                    rotate: 360deg;
+                }
+            }
+
+            .container {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                border: 1px solid #ccc;
+            }
+
+            .arrow {
+                position: absolute;
+                top: -9px;
+                left: -5px;
+                rotate: 0deg;
+                animation: move 5s linear infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="arrow"><i class="bx bx-right-arrow-alt"></i></div>
+        </div>
+    </body>
+</html>

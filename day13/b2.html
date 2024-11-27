@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>animation</title>
+
+        <style>
+            @keyframes example {
+                form {
+                    scale: 1;
+                }
+                to {
+                    scale: 1.2;
+                }
+            }
+
+            .container {
+                margin-top: 200px;
+                margin-left: 200px;
+                width: 200px;
+                height: 200px;
+                background: red;
+                position: relative;
+                rotate: 45deg;
+                animation-name: example;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+
+            .container::after,
+            .container::before {
+                position: absolute;
+                z-index: -1;
+                display: inline-block;
+                content: "";
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border-radius: 50%;
+            }
+
+            .container::after {
+                top: 0;
+                left: -50%;
+            }
+
+            .container::before {
+                top: -50%;
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container"></div>
+    </body>
+</html>
