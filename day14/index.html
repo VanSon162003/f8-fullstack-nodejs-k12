@@ -97,20 +97,20 @@
                 color: #fff;
             }
 
-            .menu__link::after {
+            .menu-item::before {
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 display: inline-block;
                 content: "";
-                width: 100%;
+                width: 150px;
                 height: 1px;
-                scale: 0;
+                /* scale: 0; */
                 background: #ccc;
                 transition: 0.3s;
             }
-            .menu__link:hover::after {
-                scale: 1;
+            .menu-item:hover::before {
+                /* scale: 1; */
             }
 
             .menu-item:hover:has([class="menu__sub-menu"]) ~ .overlay {
