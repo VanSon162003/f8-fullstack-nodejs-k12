@@ -13,10 +13,10 @@ function calcTax() {
 
     if (isNumber(wage) && wage >= 0) {
         if (wage <= 11) return "Không tính thuế";
-        if (wage > 11 && wage <= 25) return "5% thuế";
-        if (wage > 25 && wage <= 50) return "10% thuế";
-        if (wage > 50 && wage <= 80) return "20% thuế";
-        return "30% thuế";
+        if (wage > 11 && wage <= 25) return wage * 0.05;
+        if (wage > 25 && wage <= 50) return wage * 0.1;
+        if (wage > 50 && wage <= 80) return wage * 0.2;
+        return wage * 0.3;
     }
 
     return "Mời bạn nhập lại wage đúng định dạng là số lớn hơn or bằng 0";
@@ -31,11 +31,11 @@ function electricityBill() {
 
     if (isNumber(kWh) && kWh >= 0) {
         if (kWh <= 50) return 1.678;
-        if (kWh > 50 && kWh <= 100) return 1.734;
-        if (kWh > 100 && kWh <= 200) return 2.014;
-        if (kWh > 200 && kWh <= 300) return 2.536;
-        if (kWh > 300 && kWh <= 400) return 2.834;
-        return 2.927;
+        if (kWh > 50 && kWh <= 100) return kWh * 1.734;
+        if (kWh > 100 && kWh <= 200) return kWh * 2.014;
+        if (kWh > 200 && kWh <= 300) return kWh * 2.536;
+        if (kWh > 300 && kWh <= 400) return kWh * 2.834;
+        return kWh * 2.927;
     }
 
     return "Mời bạn nhập lại kWh đúng định dạng là số lớn hơn or bằng 0";
