@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Bài 1 số chính phương</h1>
+
+        <script>
+            function isNumber(n) {
+                return typeof n === "number" && n === n && n > 0;
+            }
+
+            function isCP(n) {
+                const sqrt = Math.sqrt(n);
+
+                return isNumber(n) && sqrt === Math.floor(sqrt);
+            }
+
+            function printCP(n) {
+                for (let i = 1; i < n; ++i) {
+                    if (isCP(i)) document.write(i + " ");
+                }
+            }
+            let n;
+
+            do {
+                n = +prompt("nhập vào n là 1 số nguyên dương > 0");
+            } while (!isNumber(n));
+
+            printCP(n);
+        </script>
+    </body>
+</html>
