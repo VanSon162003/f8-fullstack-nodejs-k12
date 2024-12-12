@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>BTVN</h1>
+        <script>
+            const students = [
+                { name: "Nguyen Van A", score: 9 },
+                { name: "Tran Thi B", score: 7 },
+                { name: "Le Van C", score: 5 },
+                { name: "Pham Thi D", score: 3 },
+                { name: "Doan Van E", score: 10 },
+                { name: "Hoang Thi F", score: 6 },
+            ];
+
+            let group = {
+                A: [],
+                B: [],
+                C: [],
+                D: [],
+            };
+            let highest = students[0];
+            let lowest = students[0];
+
+            for (let i = 0; i < students.length; ++i) {
+                if (students[i].score > highest.score) highest = students[i];
+                if (students[i].score < lowest.score) lowest = students[i];
+
+                if (students[i].score >= 8.5 && students[i].score <= 10) {
+                    group.A.push(students[i]);
+                } else if (students[i].score >= 6 && students[i].score < 8.5) {
+                    group.B.push(students[i]);
+                } else if (students[i].score >= 4 && students[i].score < 6) {
+                    group.C.push(students[i]);
+                } else {
+                    group.D.push(students[i]);
+                }
+            }
+
+            console.log({ highest, lowest, group });
+        </script>
+    </body>
+</html>

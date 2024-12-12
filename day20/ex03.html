@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function isNumber(n) {
+                return n === n && n > 0;
+            }
+
+            // const product = [
+            //     { id: 1, title: "Product A", price: 200 },
+            //     { id: 2, title: "Product B" },
+            //     { id: 3, title: "Product C", price: -1 },
+            //     { id: 3, title: "Product C", price: "a" },
+            // ];
+
+            // for (let i = 0; i < product.length; ++i) {
+            //     console.log(product[i].price);
+
+            //     if (!isNumber(product[i].price)) {
+            //         console.log({ i });
+            //         break;
+            //     }
+            // }
+
+            // const list = ["xuan", "ha", "thu", "dong"];
+
+            // console.log(list.join(" "));
+            // console.log(list.reverse());
+
+            let p = "Lorem ipsum dolor sit amet, consectetur adipisicing elit!";
+
+            let result = p.split(",");
+            console.log(result.join("").split("!").join(""));
+        </script>
+    </body>
+</html>

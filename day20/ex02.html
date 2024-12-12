@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>EX 2</h1>
+        <script>
+            // Input:
+
+            const users = [
+                { id: 1, username: "Minh", address: "NgheAn" },
+                { id: 2, username: "Tue", address: "VinhPhuc" },
+                { id: 3, username: "Son", address: "HaNoi" },
+                { id: 4, username: "Cong", address: "HaNoi" },
+                { id: 5, username: "Toan", address: "HaNam" },
+                { id: 6, username: "Giang", address: "HaNoi" },
+            ];
+
+            //Output:
+            // const usersGroupByAddress = {
+            //     NgheAn: [{ id: 1, username: "Minh", address: "NgheAn" }],
+            //     VinhPhuc: [{ id: 2, username: "Tue", address: "VinhPhuc" }],
+            //     HaNoi: [
+            //         { id: 3, username: "Son", address: "HaNoi" },
+            //         { id: 4, username: "Cong", address: "HaNoi" },
+            //         { id: 6, username: "Giang", address: "HaNoi" },
+            //     ],
+            //     HaNam: [
+            //         {
+            //             id: 5,
+            //             username: "Toan",
+            //             address: "HaNam",
+            //         },
+            //     ],
+            // };
+
+            let usersGroupByAddress = {};
+
+            for (value of users) {
+                console.log(value.address);
+
+                if (!usersGroupByAddress[value.address]) {
+                    usersGroupByAddress[value.address] = [];
+                }
+
+                // usersGroupByAddress[value.address].push(value);
+            }
+
+            console.log(usersGroupByAddress);
+
+            // const students = [
+            //     { id: 1, username: "Son", score: 8 },
+            //     { id: 2, username: "Dung", score: 5 },
+            //     { id: 3, username: "Minh", score: 2 },
+            // ];
+
+            /**
+             *  - tìm ng cao điểm nhất
+             *  - tìm bạn thấp điểm nhất
+             *  - tính điểm trung bình cả lớp
+             */
+
+            // console.log(students);
+
+            // function std(arrSTD) {
+            //     let max = students[0];
+            //     let min = students[0];
+            //     let tb = 0;
+
+            //     for (let i = 0; i < arrSTD.length; ++i) {
+            //         if (arrSTD[i].score > max.score) {
+            //             max = arrSTD[i];
+            //         }
+
+            //         if (arrSTD[i].score < min.score) {
+            //             min = arrSTD[i];
+            //         }
+            //         tb += arrSTD[i].score;
+            //     }
+
+            //     tb /= arrSTD.length;
+            //     return { max, min, tb };
+            // }
+
+            // console.log(std(students));
+        </script>
+    </body>
+</html>
