@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>buổi 21</h1>
+        <a href="./btvn.html">BTVN</a>
+
+        <script>
+            // const obj = {
+            //     title: "học js",
+            //     address: "Hà nội",
+            //     learn: function (lesson, time) {
+            //         console.log(
+            //             `học lập trình tại ${lesson} trong ${time} 1 buổi`
+            //         );
+            //     },
+            // };
+
+            // obj.learn("f8", "3h");
+
+            // obj.age = 32;
+            // console.log(obj);
+
+            // delete obj.age;
+            // console.log(obj);
+
+            // const newKey = "email";
+
+            // obj[newKey] = "vanson16032003@gmail.com";
+
+            // obj["hãy hỏi gì đó đê"] = "oke nhè";
+
+            // obj["_*123"] = "abcdxyz";
+
+            // console.log(obj);
+
+            // let price = 3000;
+            // let year = 2024;
+            // let title1 = "tv samsung";
+
+            // const product = { title1, price, year };
+
+            // console.log(product);
+
+            const product = {
+                title: "học js",
+                address: "Hà nội",
+                desc: "thông tin chi tiết tại....",
+                price: 2000,
+                year: 2024,
+            };
+
+            for (key in product) {
+                // console.log(`giá trị của ${key} là ${product[key]}`);
+            }
+
+            //for of chỉ áp dụng cho array không dùng cho object
+
+            // for (key of product) {
+            //     console.log("key");
+            // }
+
+            //object không có thuộc tính length
+
+            // console.log(Object.entries(product));
+
+            const arrInfo = [
+                ["fullname", "vanSon"],
+                ["age", 32],
+                ["address", "hà nội"],
+            ];
+
+            const objInfo = {};
+
+            for (item of arrInfo) {
+                objInfo[item[0]] = item[1];
+            }
+
+            console.log(objInfo);
+
+            const cart = {
+                products: [
+                    { id: 1, title: "san pham A", price: 200, quantity: 2 },
+                    { id: 2, title: "san pham B", price: 300, quantity: 4 },
+                    { id: 3, title: "san pham C", price: 230, quantity: 1 },
+                ],
+
+                getTotal: function () {
+                    // Viết phương thức tính tổng đơn hàng ở đây
+
+                    let sum = 0;
+                    for (item of this.products) {
+                        console.log(item);
+
+                        sum += item.price * item.quantity;
+                    }
+
+                    return sum;
+                },
+
+                // updateProduct: function (id, quantity) {
+                //     // xây dựng phương thức cập nhật số lượng của sản phẩm theo id sản phẩm
+
+                // },
+            };
+
+            console.log(cart.getTotal());
+        </script>
+    </body>
+</html>

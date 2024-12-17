@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>BTVN</h1>
+
+        <script>
+            const data = [];
+
+            function handleRegister(name, password, email) {
+                const regisUser = { name, password, email, role: "user" };
+
+                if (name && password && email) {
+                    return data.push(regisUser);
+                }
+
+                return "mời bạn nhập lại đủ thông tin";
+            }
+
+            function handleLogin(email, password) {
+                // const loginUser = data.filter(
+                //     (element) =>
+                //         element.email === email && element.password === password
+                // );
+
+                // return loginUser;
+
+                for (value of data) {
+                    if (value.email === email && value.password === password) {
+                        return value;
+                    }
+                }
+
+                return "Thông tin đăng nhập không hợp lệ";
+            }
+
+            handleRegister("Nguyen Van A", "123456", "nguyenvana@email.com");
+            handleRegister("Nguyen Van B", "1234567", "nguyenvanb@email.com");
+            handleRegister("Nguyen Van C", "1234567", "nguyenvan@email.com");
+
+            console.log(data);
+
+            const dataLogin = handleLogin("nguyenvanc@email.com", "1234567");
+            console.log(dataLogin);
+        </script>
+    </body>
+</html>
