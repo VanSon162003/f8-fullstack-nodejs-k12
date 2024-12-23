@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Bài 2</h1>
+
+        <script>
+            // Input:
+            function isNumber(n) {
+                return typeof n === "number" && n === n && n > 0;
+            }
+
+            function isFibonacci(n) {}
+
+            function fibonacci(n) {
+                // Xử lý và in ra kết quả
+
+                if (!isNumber(n)) {
+                    document.write("Số phần tử không hợp lệ <br><br> ");
+                    return;
+                }
+
+                document.write(`dãy fibonacci ${n} phần tử<br><br>`);
+
+                let f0 = 0;
+                let f1 = 1;
+                let fn = 0;
+
+                for (let i = 0; i < n; i++) {
+                    if (i < 2) {
+                        fn = i;
+                    } else {
+                        fn = f0 + f1;
+                        f0 = f1;
+                        f1 = fn;
+                    }
+
+                    document.write(fn + " ");
+                }
+
+                document.write("<br><br> ");
+
+                return;
+            }
+
+            // Output:
+
+            fibonacci(5); // 0 1 1 2 3
+
+            fibonacci(10); // 0 1 1 2 3 5 8 13 21 34
+
+            fibonacci(0); // Số phần tử không hợp lệ
+
+            fibonacci(-5); // Số phần tử không hợp lệ
+
+            fibonacci("abc"); // Số phần tử không hợp lệ
+
+            fibonacci(1); // 0
+        </script>
+    </body>
+</html>

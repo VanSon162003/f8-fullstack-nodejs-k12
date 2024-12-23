@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Bài 1</h1>
+
+        <script>
+            // Input:
+            const fruits = [
+                "apple",
+                "banana",
+                "kiwi",
+                "kiwi",
+                "banana",
+                "orange",
+                "apple",
+                "kiwi",
+            ];
+
+            function removeDuplicate(arr) {
+                // Xử lý và in ra kết quả
+                const result = fruits.filter((e, i) => {
+                    return fruits.indexOf(e) === i;
+                });
+                return result;
+            }
+
+            // Output:
+
+            const result = removeDuplicate(fruits);
+
+            console.log(result); // ["apple", "banana", "kiwi", "orange"]
+        </script>
+    </body>
+</html>
