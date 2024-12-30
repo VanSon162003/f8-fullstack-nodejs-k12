@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>object prototype</h1>
+        <script>
+            // function User(email, name, address) {
+            //     this.email = email;
+            //     this.name = name;
+            //     this.address = address;
+
+            //     this.hello = function () {
+            //         console.log(
+            //             `xin chào, mình là ${name}, mình đến từ ${address}`
+            //         );
+            //     };
+            // }
+
+            // User.prototype.getInfo = function () {
+            //     console.log(
+            //         `name: ${this.name}, address: ${this.address}, email: ${this.email}`
+            //     );
+            // };
+
+            // const son = new User("vanson16032003@gmail.com", "Vson", "HN");
+
+            // console.log(son);
+            // son.hello();
+
+            // son.getInfo();
+            // son.hi();
+
+            /**
+             * Dùng prototype khi nào:
+             * - khi muốn tạo ra những phương thức, thuộc tính dùng chung
+             * - dễ dàng kiểm soát hàng loạt
+             * - tối ưu bộ nhớ
+             *
+             * Khai báo phương thức thuộc tính trong constructor function khi
+             * - Dùng khi muốn tách biệt các đối tượng được tạo
+             * - Có thể ghi đè các thuộc tính, phương thức mới cho từng đối tượng cụ thể
+             * - Tốn bộ nhớ
+             */
+
+            function Cart(products, userId) {
+                this.products = products;
+                this.userId = userId;
+            }
+
+            Cart.prototype.getTotal = function () {
+                return this.products.reduce((acc, cur) => {
+                    return (acc += cur.quantity * cur.price);
+                }, 0);
+            };
+
+            const products = [
+                { id: 1, title: "Product A", quantity: 2, price: 200 },
+                { id: 2, title: "Product B", quantity: 1, price: 300 },
+                { id: 3, title: "Product C", quantity: 4, price: 240 },
+            ];
+
+            const cartOfSon = new Cart(products, "123");
+
+            console.log(cartOfSon);
+
+            console.log(cartOfSon.getTotal());
+
+            const cartOfThang = new Cart(
+                [{ id: 5, title: "tomato", quantity: 4, price: 1 }],
+                "345"
+            );
+
+            console.log(cartOfThang);
+
+            console.log(cartOfThang.getTotal());
+        </script>
+    </body>
+</html>

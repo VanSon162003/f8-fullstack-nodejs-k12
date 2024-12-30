@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Reduce 2</h1>
+        <script>
+            /**
+             * Add a custom reduce2 method to Array.prototype
+             * This method mimics the behavior of Array.prototype.reduce
+             * @param {function} callback - The function to execute for each element in the array.
+             * @param {any} [initialValue] - Optional. Value to use as the first argument to the first call of the callback.
+             * @returns {any} - The value that results from the reduction.
+             */
+
+            Array.prototype.reduce2 = function (callback, initialValue) {
+                const length = this.length;
+                if (length === 0 && initialValue === undefined)
+                    return "Reduce of empty array with no initial value";
+
+                let result = initialValue ?? this[0];
+                // console.log(result);
+
+                if (initialValue === undefined) {
+                    for (let i = 1; i < length; ++i) {
+                        if (i in this) {
+                            result = callback(result, this[i], i, this);
+                        }
+                    }
+                } else {
+                    for (let i = 0; i < length; ++i) {
+                        if (i in this) {
+                            result = callback(result, this[i], i, this);
+                        }
+                    }
+                }
+
+                return result;
+            };
+
+            // Sample usage
+
+            // Sample 1
+
+            const arr1 = [1, 2, 3, 4, 5];
+
+            const result1 = arr1.reduce2((accumulator, value) => {
+                return accumulator + value;
+            }, 0);
+            console.log(result1); // 15
+
+            const result5 = arr1.reduce2((accumulator, value) => {
+                return accumulator + value;
+            });
+
+            console.log(result5); // 15
+
+            // Sample 2
+
+            const arr2 = [];
+
+            // console.log(arr2.length);
+
+            const result2 = arr2.reduce2((accumulator, value) => {
+                return accumulator + value;
+            });
+
+            console.log(result2); // Error: Reduce of empty array with no initial value
+
+            // Sample 3
+
+            const arr3 = [];
+
+            const result3 = arr3.reduce2((accumulator, value) => {
+                return accumulator + value;
+            }, 0);
+
+            console.log(result3); // 0
+
+            const fruits = [
+                "apple",
+                "banana",
+                "orange",
+                "kiwi",
+                "orange",
+                "apple",
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                "kiwi",
+                "apple",
+                "apple",
+            ];
+
+            const total3 = fruits.reduce2((acc, cur, i, arr) => {
+                let cnt = 0;
+                // console.log(acc, cur, i);
+
+                // console.log("indexof " + arr.indexOf(cur));
+
+                // console.log(cur, arr);
+
+                if (!acc[cur]) {
+                    acc[cur] = 0;
+                }
+
+                acc[cur]++;
+
+                return acc;
+            }, {});
+
+            console.log(total3);
+
+            const total4 = fruits.reduce2((acc, cur, i, arr) => {
+                // console.log(acc, cur, i);
+
+                if (arr.indexOf(cur) === i) {
+                    acc.push(cur);
+                }
+
+                return acc;
+            }, []);
+
+            console.log(total4);
+        </script>
+    </body>
+</html>

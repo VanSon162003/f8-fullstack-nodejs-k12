@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Filter 2</h1>
+        <script>
+            /**
+             * Add a custom filter2 method to Array.prototype
+             * This method mimics the behavior of Array.prototype.filter
+             * @param {function} callback - The function to execute for each element in the array.
+             * @param {any} [thisArg] - Optional. Value to use as this when executing callback.
+             * @returns {Array} - A new array with all elements that pass the test implemented by the callback.
+             */
+            Array.prototype.filter2 = function (callback, thisArg) {
+                const length = this.length;
+                const result = [];
+
+                for (let i = 0; i < length; ++i) {
+                    if (i in this) {
+                        const check = callback.call(thisArg, this[i], i, this);
+
+                        if (check) result.push(this[i]);
+                    }
+                }
+
+                return result;
+            };
+
+            // Sample usage
+            const arr = [1, 2, 3, 4, 5];
+            const result = arr.filter2((value) => {
+                return value % 2 !== 0;
+            });
+
+            console.log(result); // [1, 3, 5]
+        </script>
+    </body>
+</html>

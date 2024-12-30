@@ -9,5 +9,157 @@
         <h1>Buổi 24</h1>
         <a href="./b1.html">bài 1</a>
         <a href="./b2.html">bài 2</a>
+
+        <script>
+            // phương thức include tìm kiếm trong mảng có giá trị cần tìm hay không trả về true or false
+
+            // const arr1 = [1, 2, 3, 4, 5, "hee", "f8", NaN];
+
+            // console.log(arr1.includes(NaN));
+            // console.log(arr1.find((item) => item === NaN));
+
+            // const arrFilter = arr1.filter((arr) => arr % 2 !== 0);
+
+            // console.log(arrFilter);
+
+            // const students = [
+            //     { id: 1, fullName: "Le Van Minh", age: 28, address: "Nghe An" },
+            //     {
+            //         id: 2,
+            //         fullName: "Hoang Quang Thang",
+            //         age: 18,
+            //         address: "Vinh Phuc",
+            //     },
+            //     {
+            //         id: 3,
+            //         fullName: "Kieu Minh Tue",
+            //         age: 21,
+            //         address: "Vinh Phuc",
+            //     },
+            //     {
+            //         id: 4,
+            //         fullName: "Nguyen Van Son",
+            //         age: 17,
+            //         address: "Ha Noi",
+            //     },
+            // ];
+
+            // const newStudent = students.filter((std) => std.age > 18);
+
+            // console.log(newStudent);
+
+            /**
+             *  Deep copy
+             *  - JSON: Nhược điểm là không xử lý được phương thức và các giá trị đặc biệt
+             *  - Dùng thư viện: lodash
+             *  - structuresClone()
+             */
+
+            // thuộc tính flat dùng để làm phẳng mảng và có thể xoá bỏ các phần tử trống
+
+            // const arr = [
+            //     1,
+            //     2,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     ,
+            //     [3, [4, [4, [5, [6, [6, [66, [6, [6, [6, [7, 7, [5]]]]]]]]]]]],
+            // ];
+
+            // console.log(arr.flat(Infinity));
+            // console.log(arr);
+
+            /**
+             * ES6 với mảng
+             * destructuring
+             * rest
+             * spread
+             */
+
+            // const arr1 = [1, 2, 3];
+            // const arr2 = [5, 6, 4];
+
+            // const [a, , b] = arr2;
+            // console.log(b);
+
+            // const newArr = [...arr1, "son", ...arr2];
+            // console.log(newArr);
+
+            /**
+             * sort()
+             * reduce()
+             */
+
+            // const arr1 = [5, 3, 6, 4, 2, 8, 1, 100, 5, 6, 4];
+            // console.log(arr1.sort((a, b) => a - b));
+            // console.log(arr1);
+
+            const students = [
+                { id: 1, fullname: "Le Van Minh", age: 28, address: "NgheAn" },
+                {
+                    id: 2,
+                    fullname: "Hoang Quang Thang",
+                    age: 18,
+                    address: "VinhPhuc",
+                },
+                {
+                    id: 3,
+                    fullname: "Kieu Minh Tue",
+                    age: 21,
+                    address: "VinhPhuc",
+                },
+                {
+                    id: 4,
+                    fullname: "Nguyen Van Cong",
+                    age: 18,
+                    address: "HaNoi",
+                },
+                {
+                    id: 5,
+                    fullname: "Nguyen Minh Cong",
+                    age: 18,
+                    address: "HaNoi",
+                },
+                {
+                    id: 6,
+                    fullname: "Nguyen Van Anh Cong",
+                    age: 22,
+                    address: "HaNoi",
+                },
+            ];
+
+            // students.sort((a, b) => a.age - b.age);
+
+            // console.log(students);
+
+            // function sortByName(data) {
+            //     data.sort((a, b) => {
+            //         const fullNameA = a.fullname.split(" ");
+            //         const fullNameB = b.fullname.split(" ");
+
+            //         const firstNameA = fullNameA.pop();
+            //         const firstNameB = fullNameB.pop();
+            //         if (firstNameA < firstNameB) return -1;
+            //         if (firstNameA > firstNameB) return 1;
+
+            //         if (fullNameA < fullNameB) return -1;
+            //         if (fullNameA > fullNameB) return 1;
+            //     });
+            // }
+
+            // sortByName(students);
+            // console.log(students);
+        </script>
     </body>
 </html>

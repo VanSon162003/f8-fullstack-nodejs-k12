@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function User(email, name, address) {
+                this.email = email;
+                this.name = name;
+                this.address = address;
+
+                this.hello1 = function () {
+                    console.log(
+                        `xin chào, mình là ${this.name}, mình đến từ ${this.address}`
+                    );
+                };
+            }
+
+            User.prototype.hello2 = function () {
+                console.log(
+                    `xin chào, mình là ${this.name}, mình đến từ ${this.address}`
+                );
+            };
+            const hoang = new User("hoang@gmail.com", "hoang nguyen", "BG");
+            console.log(Object.getPrototypeOf(hoang)); // nên dùng để kiểm tra
+            console.log(hoang.__proto__); // không khuyến khích sử dụng
+
+            console.log(hoang.hasOwnProperty("name"));
+            console.log(hoang.hasOwnProperty("email"));
+            console.log(hoang.hasOwnProperty("hello1"));
+        </script>
+    </body>
+</html>

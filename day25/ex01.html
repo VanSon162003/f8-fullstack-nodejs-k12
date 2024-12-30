@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Object constructor</h1>
+
+        <script>
+            function Book(title, author, year) {
+                this.title = title;
+                this.author = author;
+                this.year = year;
+
+                console.log(title, author, year);
+            }
+
+            const myBook = new Book("Học Js không khó", "hoangnm", 2024);
+
+            console.log(myBook);
+
+            /**
+             *  Không lạm dụng built-in function constructor vì:
+             * - Không phản ánh đúng kiểu dữ liệu
+             * - Dài dòng không cần thiết
+             * - Lãng phí bộ nhớ
+             * - Giảm hiệu suất
+             */
+        </script>
+    </body>
+</html>

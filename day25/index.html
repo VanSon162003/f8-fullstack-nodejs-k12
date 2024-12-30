@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Buổi 25</h1>
+        <a href="./b1.html">bài 1</a>
+        <a href="./b2.html">bài 2</a>
+        <a href="./b3.html">bài 3</a>
+
+        <script>
+            const arr = [1, 2, 3, 4, 5];
+
+            const total = arr.reduce((acc, cur) => {
+                return (acc += cur);
+            }, 0);
+
+            console.log(total);
+
+            const arr2 = [2, 3, 4, 5, 6, 7, 8, 9, 11];
+
+            function SNT(n) {
+                if (n < 2) return 0;
+
+                for (let i = 2; i * i <= n; ++i) {
+                    if (n % i === 0) return 0;
+                }
+
+                return 1;
+            }
+
+            const total2 = arr2.reduce((acc, cur) => {
+                // console.log(acc, cur);
+
+                if (SNT(cur)) {
+                    return (acc *= cur);
+                }
+
+                return acc;
+            }, 1);
+
+            console.log(total2);
+
+            const fruits = [
+                "apple",
+                "banana",
+                "orange",
+                "kiwi",
+                "orange",
+                "apple",
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                "kiwi",
+                "apple",
+                "apple",
+            ];
+
+            const total3 = fruits.reduce((acc, cur, i, arr) => {
+                let cnt = 0;
+                // console.log(acc, cur, i);
+
+                // console.log("indexof " + arr.indexOf(cur));
+
+                // console.log(cur, arr);
+
+                if (!acc[cur]) {
+                    acc[cur] = 0;
+                }
+
+                acc[cur]++;
+
+                return acc;
+            }, {});
+
+            console.log(total3);
+
+            const total4 = fruits.reduce((acc, cur, i, arr) => {
+                // console.log(acc, cur, i);
+
+                if (arr.indexOf(cur) === i) {
+                    acc.push(cur);
+                }
+
+                return acc;
+            }, []);
+
+            console.log(total4);
+
+            const users = [
+                {
+                    id: 1,
+                    fullname: "Nguyen Manh Dung",
+                    gender: "male",
+                    address: "Ca Mau",
+                },
+                {
+                    id: 2,
+                    fullname: "Nguyen Xuan Phu",
+                    gender: "male",
+                    address: "Da Nang",
+                },
+                {
+                    id: 3,
+                    fullname: "Bui Tien Toan",
+                    gender: "male",
+                    address: "Quang Ninh",
+                },
+                {
+                    id: 4,
+                    fullname: "Nguyen Phuong Hang",
+                    gender: "female",
+                    address: "Khanh Hoa",
+                },
+                {
+                    id: 5,
+                    fullname: "Nguyen Minh Anh",
+                    gender: "female",
+                    address: "Bac Ninh",
+                },
+                {
+                    id: 6,
+                    fullname: "Duong Thuy Dung",
+                    gender: "female",
+                    address: "Quang Ninh",
+                },
+            ];
+            /** Hãy viết hàm createGroupUsers để nhóm các users ở dữ liệu trên theo giới tính và địa chỉ.
+             * - Khi số lượng user tăng lên, các address mới xuất hiện thì hàm vẫn hoạt động đúng.
+             */
+            // Output:
+            result = {
+                "Ca Mau": {
+                    // male: [...],
+                    // female: [...],
+                },
+                // ...
+            };
+        </script>
+    </body>
+</html>
