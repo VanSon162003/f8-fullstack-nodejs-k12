@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Buổi 27: Number</h1>
+
+        <a href="./b1.html">bài 1</a>
+        <a href="./b2.html">bài 2</a>
+
+        <script>
+            // console.log(Number.prototype);
+
+            // console.log((123.56).toFixed(1));
+            // console.log((123.56).toPrecision(8));
+            // console.log((255).toString(16));
+
+            // let a = 123;
+
+            // console.log(Number.parseInt());
+
+            // console.log(Math);
+
+            let myNumber = 1234.5;
+
+            // console.log(Math.ceil(myNumber));
+            // console.log(Math.floor(myNumber));
+            // console.log(Math.round(myNumber));
+            // console.log(Math.abs(myNumber));
+
+            // console.log(Math.floor(Math.random() * 10));
+
+            function randomMonth() {
+                const random = Math.floor(Math.random() * 13);
+
+                return `tháng ${random}`;
+            }
+            console.log(randomMonth());
+
+            function randomForQuizz() {
+                const arrTemp = ["A", "B", "C", "D"];
+                const random = Math.floor(Math.random() * arrTemp.length);
+
+                return `đáp án đúng là: ${arrTemp[random]}`;
+            }
+
+            console.log(randomForQuizz());
+
+            function generatorId(n, prefix = "") {
+                const id =
+                    "ASDFGHJKLQWERTYUIOPZXCVBNMzxcvbnmasdfghjklqwertyuiop0123456789";
+
+                let result = `${prefix}`;
+
+                for (let i = 1; i <= n; ++i) {
+                    let random = Math.floor(Math.random() * id.length);
+
+                    result += id[random];
+                }
+
+                return result;
+            }
+
+            console.log(generatorId(5, "he - "));
+        </script>
+    </body>
+</html>

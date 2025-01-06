@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>B2</h1>
+
+        <script>
+            const categories = [
+                {
+                    id: 1,
+                    name: "Electronics",
+                    children: [
+                        {
+                            id: 2,
+                            name: "Laptops",
+                            children: [
+                                {
+                                    id: 3,
+                                    name: "Apple",
+                                },
+                                {
+                                    id: 4,
+                                    name: "Dell",
+                                },
+                            ],
+                        },
+                        {
+                            id: 5,
+                            name: "Headphones",
+                        },
+                    ],
+                },
+                {
+                    id: 6,
+                    name: "Books",
+                    children: [
+                        {
+                            id: 7,
+                            name: "Fiction",
+                            children: [
+                                {
+                                    id: 8,
+                                    name: "Thrillers",
+                                },
+                                {
+                                    id: 9,
+                                    name: "Mystery",
+                                },
+                            ],
+                        },
+                        {
+                            id: 10,
+                            name: "Non-Fiction",
+                        },
+                    ],
+                },
+            ];
+
+            function flattenCategories(arr) {
+                if (!Array.isArray(arr) || arr.length === 0) {
+                    return "Đối tượng truyền vào phải là một mảng không rỗng!";
+                }
+
+                const result = [];
+
+                function flatArr(arr, parent = 0) {
+                    const parentId = parent;
+
+                    arr.forEach((e) => {
+                        const result1 = { ...e, parentId };
+
+                        result.push(result1);
+                        if (e.children) {
+                            flatArr(e.children, (parent = e.id));
+                        }
+                    });
+
+                    return result;
+                }
+
+                flatArr(arr);
+
+                result.forEach((e) => {
+                    delete e.children;
+                });
+
+                return result;
+            }
+
+            // [
+            //     { id: 1, name: "Electronics", parentId: 0 },
+            //     { id: 2, name: "Laptops", parentId: 1 },
+            //     { id: 3, name: "Apple", parentId: 2 },
+            //     { id: 4, name: "Dell", parentId: 2 },
+            //     { id: 5, name: "Headphones", parentId: 1 },
+            //     { id: 6, name: "Books", parentId: 0 },
+            //     { id: 7, name: "Fiction", parentId: 6 },
+            //     { id: 8, name: "Thrillers", parentId: 7 },
+            //     { id: 9, name: "Mystery", parentId: 7 },
+            //     { id: 10, name: "Non-Fiction", parentId: 6 },
+            // ];
+
+            const result = flattenCategories(categories);
+            console.log(result);
+        </script>
+    </body>
+</html>

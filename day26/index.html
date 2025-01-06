@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Buổi 26</h1>
+        <a href="./b1.html">BTVN</a>
+        <script>
+            /**
+             *  Object.create(proto, propertiesObject)
+             * proto:
+             *  - Là object muốn kế thừa thuộc tính, phương thức.
+             *  - null: Tạo ra object không kế thừa gì cả, không có properties.
+             *
+             * propertiesObject:
+             *  - một object chứa những thuộc tính, phương thức thêm vào cho object.create
+             *  - ở trong gồm các thuộc tính:
+             *      + value: là giá trị của nó (có thể là bất cứ kiểu dữ liệu nào)
+             *      + writable: có cho gì đè hay không (gtri mặc định là false)
+             *      + enumerable: có cho duyệt qua vòng for in hay không (gtri mặc định là false)
+             *      + configurable: có thể thay đổi các giá trị trên được hay không (gtri mặc định là false)
+             */
+
+            const testObject = {
+                noi: "gg",
+                sayHello() {
+                    console.log(123);
+                },
+            };
+
+            // console.log(testObject);
+
+            const createObject = Object.create(testObject, {
+                name: { value: "son", writable: true },
+            });
+
+            createObject.name = " hi";
+
+            // console.log(createObject.name);
+
+            let content = "F8 - hoc lap trinh";
+            let strReverse = "";
+
+            for (let i = content.length - 1; i >= 0; --i) {
+                // console.log(content[i]);
+                // console.log(content[content.length - i - 1]);
+
+                // strReverse.concat(content[i]);
+                strReverse += content[i];
+            }
+
+            console.log(content.split(""));
+            console.log(content.split("h"));
+
+            /**
+             * split(separator, limit)
+             * - separator: phần tử phân tách
+             * - limit?: giới hạn số lượng phần tử của mảng kết quả
+             */
+
+            /**
+             * string.substring()
+             * - nếu âm -> 0
+             * - nếu > str.length -> length
+             * - nếu start > end: đảo ngược start và end
+             *
+             *
+             * string.slice()
+             * - nếu âm -> đếm từ cuối chuỗi
+             * - nếu start > end: chuỗi rỗng
+             * - còn lại giống substring
+             */
+
+            // console.log(content.indexOf("h", 9));
+            // console.log(content.includes("F8"));
+
+            // console.log("acccsds".lastIndexOf("c", 1));
+        </script>
+    </body>
+</html>
