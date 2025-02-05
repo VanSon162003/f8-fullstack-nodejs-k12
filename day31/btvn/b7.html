@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .grap {
+                display: flex;
+                gap: 20px;
+            }
+            p {
+                width: 100px;
+            }
+
+            #form {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bé tập tính</h1>
+        <div class="grap">
+            <p>số thứ nhất</p>
+            <input type="text" name="one" id="one" />
+        </div>
+        <div class="grap">
+            <p>số thứ hai</p>
+            <input type="text" name="two" id="two" />
+        </div>
+        <div class="grap">
+            <p>kết quả</p>
+            <input type="text" name="result" id="result" />
+        </div>
+
+        <form id="form">
+            <label for="add">
+                <input type="radio" name="calc" id="add" />
+                cộng
+            </label>
+            <label for="minus">
+                <input type="radio" name="calc" id="minus" />
+                trừ
+            </label>
+
+            <label for="core">
+                <input type="radio" name="calc" id="core" />
+                nhân
+            </label>
+
+            <label for="divide">
+                <input type="radio" name="calc" id="divide" />
+                chia
+            </label>
+
+            <button class="btn">Tính</button>
+        </form>
+
+        <script src="./b7.js"></script>
+    </body>
+</html>

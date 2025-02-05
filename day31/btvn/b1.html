@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                /* background-color: #806565; */
+            }
+
+            main {
+                margin-top: 100px;
+            }
+
+            button {
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 10px;
+                outline: none;
+                background-color: transparent;
+                cursor: pointer;
+            }
+
+            li {
+                list-style-type: none;
+            }
+            form {
+                margin-top: 30px;
+                display: flex;
+                gap: 10px;
+            }
+            input {
+                width: 80%;
+            }
+            ul,
+            li {
+                margin-top: 30px;
+            }
+            .task-item {
+                position: relative;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                padding: 10px;
+            }
+            .task-item.completed {
+                opacity: 0.6;
+            }
+
+            .task-item.completed .task-title {
+                text-decoration: line-through;
+            }
+
+            .task-btn {
+                border: none;
+            }
+
+            .task-btn:hover {
+                cursor: pointer;
+                color: #666;
+            }
+
+            #todo-input {
+                padding: 10px;
+            }
+            .empty {
+                color: #565656;
+                text-align: center;
+            }
+            .none {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1 class="page-heading">tạo mới công việc của bạn</h1>
+            <form id="todo-form" action="" class="todo-form">
+                <input
+                    type="text"
+                    id="todo-input"
+                    class="input"
+                    placeholder="thêm công việc tại here"
+                    spellcheck="false"
+                />
+
+                <button id="submit" class="submit-btn">thêm</button>
+                <button id="task-menu" class="submit-btn">công việc</button>
+                <button id="filter-done" class="submit-btn">
+                    việc đã hoàn thành</button
+                ><button id="filter-not-done" class="submit-btn">
+                    việc chưa đã hoàn thành
+                </button>
+            </form>
+            <ul id="task-list" class="task-list"></ul>
+            <ul id="task-list-done" class="task-list none"></ul>
+            <ul id="task-list-not-done" class="task-list none"></ul>
+        </main>
+
+        <script src="./b1.js"></script>
+    </body>
+</html>

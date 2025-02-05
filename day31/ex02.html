@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                border: 2px solid #ccc;
+                border-radius: 8px;
+            }
+            .colorful {
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outerBox">
+            <div class="box free">
+                <h2>nội dung gói free</h2>
+                <ul>
+                    <li>giới hạn dung lượng</li>
+                    <li>dùng thử trong 30 ngày</li>
+                    <li>số lượng người dùng: 30 người</li>
+                </ul>
+            </div>
+
+            <div class="box premium">
+                <h2>nội dung gói premium</h2>
+                <ul>
+                    <li>không giới hạn dung lượng</li>
+                    <li>sử dụng trọn đời</li>
+                    <li>số lượng người dùng: 100 người</li>
+                </ul>
+            </div>
+
+            <div class="box company">
+                <h2>nội dung gói company</h2>
+                <ul>
+                    <li>không giới hạn dung lượng</li>
+                    <li>sử dụng trọn đời</li>
+                    <li>số lượng người dùng: 100 người</li>
+                </ul>
+            </div>
+            <div class="box free">
+                <h2>nội dung gói free</h2>
+                <ul>
+                    <li>giới hạn dung lượng</li>
+                    <li>dùng thử trong 30 ngày</li>
+                    <li>số lượng người dùng: 30 người</li>
+                </ul>
+            </div>
+
+            <div class="box premium">
+                <h2>nội dung gói premium</h2>
+                <ul>
+                    <li>không giới hạn dung lượng</li>
+                    <li>sử dụng trọn đời</li>
+                    <li>số lượng người dùng: 100 người</li>
+                </ul>
+            </div>
+
+            <div class="box company">
+                <h2>nội dung gói company</h2>
+                <ul>
+                    <li>không giới hạn dung lượng</li>
+                    <li>sử dụng trọn đời</li>
+                    <li>số lượng người dùng: 100 người</li>
+                </ul>
+            </div>
+            <div class="box free">
+                <h2>nội dung gói free</h2>
+                <ul>
+                    <li>giới hạn dung lượng</li>
+                    <li>dùng thử trong 30 ngày</li>
+                    <li>số lượng người dùng: 30 người</li>
+                </ul>
+            </div>
+
+            <div class="box premium">
+                <h2>nội dung gói premium</h2>
+                <ul>
+                    <li>không giới hạn dung lượng</li>
+                    <li>sử dụng trọn đời</li>
+                    <li>số lượng người dùng: 100 người</li>
+                </ul>
+            </div>
+
+            <div class="box company">
+                <h2>nội dung gói company</h2>
+                <ul>
+                    <li>không giới hạn dung lượng</li>
+                    <li>sử dụng trọn đời</li>
+                    <li>số lượng người dùng: 100 người</li>
+                </ul>
+            </div>
+            <div class="box free">
+                <h2>nội dung gói free</h2>
+                <ul>
+                    <li>giới hạn dung lượng</li>
+                    <li>dùng thử trong 30 ngày</li>
+                    <li>số lượng người dùng: 30 người</li>
+                </ul>
+            </div>
+
+            <div class="box premium">
+                <h2>nội dung gói premium</h2>
+                <ul>
+                    <li>không giới hạn dung lượng</li>
+                    <li>sử dụng trọn đời</li>
+                    <li>số lượng người dùng: 100 người</li>
+                </ul>
+            </div>
+
+            <div class="box company">
+                <h2>nội dung gói company</h2>
+                <ul>
+                    <li>không giới hạn dung lượng</li>
+                    <li>sử dụng trọn đời</li>
+                    <li>số lượng người dùng: 100 người</li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            const outerBox = document.querySelector(".outerBox");
+
+            let active = null;
+            outerBox.onclick = function (e) {
+                const target = e.target.closest(".box");
+
+                if (active && target !== active) {
+                    active.classList.remove("colorful");
+                }
+
+                target.classList.add("colorful");
+                active = target;
+            };
+        </script>
+    </body>
+</html>

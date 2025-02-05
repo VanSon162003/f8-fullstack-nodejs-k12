@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .list_img {
+                display: flex;
+                transition: 0.5s;
+            }
+
+            .slide_show {
+                overflow: hidden;
+            }
+            .slide {
+                /* width: 100vw; */
+            }
+            .prev,
+            .next {
+                position: absolute;
+                background-color: rgba(120, 115, 115, 0.5);
+                border-radius: 10px;
+
+                padding: 15px 20px;
+                user-select: none;
+                cursor: pointer;
+                color: #fff;
+                transition: 0.3s;
+                translate: 0 -100%;
+            }
+
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(77, 74, 74, 0.5);
+            }
+
+            .prev {
+                top: 50%;
+                left: 0;
+            }
+            .next {
+                top: 50%;
+                right: 0;
+            }
+
+            #dots {
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+            }
+            .dot {
+                width: 20px;
+                height: 20px;
+                background-color: #ccc;
+                border-radius: 50%;
+            }
+            .dot.active {
+                background-color: #9e8989;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div id="slide_container" class="slide_show"></div>
+            <div class="dots_container" id="dots"></div>
+        </main>
+
+        <script src="./b2.js"></script>
+    </body>
+</html>

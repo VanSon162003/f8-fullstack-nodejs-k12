@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                position: relative;
+                padding: 10px;
+                cursor: pointer;
+                background: #f8f9fa;
+                border: 1px solid #ddd;
+            }
+
+            li:hover {
+                background: #e9ecef;
+            }
+
+            .submenu {
+                display: none;
+                position: absolute;
+                left: 100%;
+                top: 0;
+                background: white;
+                min-width: 150px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            li:hover > .submenu {
+                display: block;
+            }
+
+            .menu {
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu"></div>
+
+        <script src="./b6.js"></script>
+    </body>
+</html>

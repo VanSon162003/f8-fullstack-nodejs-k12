@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chia Bill</h1>
+
+        <form action="">
+            <label for="sum">Tổng bill</label>
+            <input type="text" name="sum" id="sum" />
+
+            <label for="number">Số người chia</label>
+            <input type="text" name="number" id="number" />
+
+            <label for="tip">tiền tip</label>
+            <input
+                type="text"
+                name="tip"
+                id="tip"
+                placeholder="Nhập tiền tip nếu có"
+            />
+
+            <button class="btn">Tính tiền</button>
+        </form>
+
+        <div class="render"></div>
+        <script src="./b8.js"></script>
+    </body>
+</html>

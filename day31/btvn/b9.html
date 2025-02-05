@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <!-- Sử dụng thuộc tính border bằng CSS -->
+        <style type="text/css">
+            table,
+            th,
+            td {
+                border: 1px solid red;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Danh Sách Sản Phẩm</h1>
+        <table id="table">
+            <tr>
+                <th>STT</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Giá</th>
+                <th>Thêm Giỏ Hàng</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td data-sp="0">Sản phẩm 1</td>
+                <td data-price="0">1000</td>
+                <td>
+                    <input type="number" name="number" value="1" />
+                    <button class="btn">Thêm vào giỏ</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td data-sp="1">Sản phẩm 2</td>
+                <td data-price="1">2000</td>
+                <td>
+                    <input type="number" name="number" value="1" />
+                    <button class="btn">Thêm vào giỏ</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td data-sp="2">Sản phẩm 3</td>
+                <td data-price="2">3000</td>
+                <td>
+                    <input type="number" name="number" value="1" />
+                    <button class="btn">Thêm vào giỏ</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td data-sp="3">Sản phẩm 4</td>
+                <td data-price="3">4000</td>
+                <td>
+                    <input type="number" name="number" value="1" />
+                    <button class="btn">Thêm vào giỏ</button>
+                </td>
+            </tr>
+        </table>
+        <h2>Giỏ hàng</h2>
+
+        <div class="render"></div>
+
+        <script src="./b9.js"></script>
+    </body>
+</html>

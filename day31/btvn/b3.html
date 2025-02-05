@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .modal__backdrop {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: rgba(0, 0, 0, 0.5);
+                position: fixed;
+                inset: 0;
+            }
+
+            .modal__container {
+                width: 500px;
+                min-height: 200px;
+                background-color: #f4f0f0;
+                border-radius: 8px;
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+            }
+
+            .btn {
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 10px 20px;
+                color: rgb(72, 66, 66);
+
+                transition: 0.2s;
+            }
+
+            .btn:hover {
+                cursor: pointer;
+                color: rgb(12, 12, 12);
+
+                background-color: #ccc;
+            }
+
+            .modal__container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                padding: 20px;
+                gap: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="btn">rút thẻ</button>
+        <div class="modal"></div>
+
+        <script src="./b3.js"></script>
+    </body>
+</html>
