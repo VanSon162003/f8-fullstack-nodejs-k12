@@ -70,6 +70,7 @@ const categories = [
 const ul = document.querySelector(".menu");
 
 function renderCate() {
+    if (!Array.isArray(categories)) return;
     const cateArr = [];
     const cateObj = {};
 
