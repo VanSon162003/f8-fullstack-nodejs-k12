@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" required placeholder="email" name="email" />
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+                <input
+                    type="password"
+                    required
+                    placeholder="password"
+                    name="password"
+                />
+            </div>
+            <button onclick="login(event)">Login</button>
+        </form>
+
+        <script>
+            function login(e) {
+                e.preventDefault();
+                const info =
+                    JSON.parse(localStorage.getItem("userInfor")) ?? {};
+
+                const email = document.querySelector("input[type='email']");
+                const password = document.querySelector(
+                    "input[type='password']"
+                );
+
+                console.log(email, password);
+
+                if (
+                    email.value !== info.email ||
+                    password.value !== info.password
+                ) {
+                    console.log(email.value, password.value);
+
+                    return alert("tài khoản hoặc mật khẩu không đúng");
+                }
+
+                return alert("đăng nhập thành công");
+            }
+        </script>
+    </body>
+</html>

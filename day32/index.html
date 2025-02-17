@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" required placeholder="email" name="email" />
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+                <input
+                    type="password"
+                    required
+                    placeholder="password"
+                    name="password"
+                />
+            </div>
+            <button>Submit</button>
+        </form>
+
+        <button onclick="change()">login</button>
+
+        <script>
+            const form = document.getElementById("registerForm");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(form);
+                const userInfor = Object.fromEntries(formData);
+
+                // validation
+                if (!userInfor?.email || !userInfor?.password) {
+                    console.log("Khong dk bo trong");
+                }
+                if (userInfor?.password.length < 8) {
+                    console.log("Mat khau qua ngan");
+                }
+
+                localStorage.setItem("userInfor", JSON.stringify(userInfor));
+            });
+
+            function change() {
+                location.href = "./login.html";
+            }
+        </script>
+    </body>
+</html>
