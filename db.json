@@ -1,34 +1,22 @@
 {
   "tasks": [
     {
-      "title": "rửa chén",
+      "title": "12",
       "completed": false,
       "priority": 2,
-      "id": 1
-    },
-    {
-      "title": "aaa",
-      "completed": false,
-      "priority": 1,
-      "id": 2
-    },
-    {
-      "title": "hello",
-      "completed": false,
-      "priority": 3,
       "id": 3
     },
     {
-      "title": "c",
-      "completed": false,
-      "priority": 1,
-      "id": 4
-    },
-    {
       "title": "hello",
       "completed": false,
-      "priority": 3,
+      "priority": 2,
       "id": 5
+    },
+    {
+      "title": "a",
+      "completed": false,
+      "priority": 3,
+      "id": 6
     }
   ],
   "products": [

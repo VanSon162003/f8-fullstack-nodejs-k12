@@ -64,6 +64,9 @@ function updateTasks(index, value, completed = false, priority = 1) {
         )
         .catch((err) => err);
 }
+function saveStorage(key, body) {
+    localStorage.setItem(key, JSON.stringify(body));
+}
 
 function handle(e) {
     getAPI((data) => {
@@ -71,13 +74,17 @@ function handle(e) {
         taskIndex = +taskItem.dataset.index;
         task = data[taskIndex];
 
+        const nameStatus = "status" + taskItem.dataset.id;
+
+        const namePriority = "priority" + taskItem.dataset.id;
+
         if (e.target.closest(".edit")) {
             const newTitle = prompt(
                 "bạn có muốn thay đổi không",
                 task.title
             ).trim();
 
-            const check = isDuplication(data, newTitle, task.id);
+            const check = isDuplication(data, newTitle, taskIndex);
             if (check) return alert("công việc này đã có rồi");
 
             if (!newTitle) return alert("hãy nhập công việc muốn thay đổi");
@@ -87,21 +94,18 @@ function handle(e) {
 
         if (e.target.closest(".status")) {
             const status = e.target.closest(".status");
-            const name = "status" + taskItem.dataset.id;
 
             status.onchange = function (e) {
-                localStorage.setItem(name, JSON.stringify(status.value));
+                saveStorage(nameStatus, status.value);
                 getAPI((data) => renderTasks(data));
             };
         }
 
         if (e.target.closest(".priority")) {
-            const name = "priority" + taskItem.dataset.id;
-
             const priority = e.target.closest(".priority");
 
             priority.onchange = function (e) {
-                localStorage.setItem(name, JSON.stringify(priority.value));
+                saveStorage(namePriority, priority.value);
                 const priorityNumber = `${
                     priority.value === "low"
                         ? 1
@@ -121,7 +125,8 @@ function handle(e) {
         if (e.target.closest(".delete")) {
             if (confirm("bạn có muốn xoá công việc này không")) {
                 deleteTasks(taskItem.dataset.id);
-                localStorage.removeItem(name);
+                localStorage.removeItem(nameStatus);
+                localStorage.removeItem(namePriority);
             }
         }
     });
