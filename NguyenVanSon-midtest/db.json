@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Trấn Thành",
+      "math": 10,
+      "english": 10,
+      "science": 10
+    },
+    {
+      "name": "Nguyễn Văn Sơn2",
+      "math": 10,
+      "english": 10,
+      "science": 10,
+      "id": 3
+    }
+  ]
+}

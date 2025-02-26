@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    background: #1a261a;
+    color: #fff;
+}
+input,
+button,
+textarea,
+select {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+form {
+    width: 400px;
+    padding: 24px;
+    border: 1px solid #bbb;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    margin: 100px auto 0;
+}
+ul {
+    padding: 0;
+}
+button {
+    background: transparent;
+    border: none;
+}
+main {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.page-heading {
+    font-size: 2.4rem;
+}
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.todo-form > select {
+    border: 1px solid #fff;
+    border-radius: 8px;
+}
+.input,
+.submit-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    background: transparent;
+    font-weight: 600;
+}
+.input {
+    flex: 1;
+}
+.submit-btn {
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+.task-item {
+    display: flex;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ea9652;
+}
+.task-item.completed {
+    opacity: 0.6;
+}
+.task-item.completed .task-title {
+    text-decoration: line-through;
+}
+.task-title {
+    flex: 1;
+}
+.task-action {
+    display: flex;
+    gap: 16px;
+}
+.task-btn {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.task-btn.edit {
+    color: #50ad7e;
+}
+.task-btn.done {
+    color: #ea9652;
+}
+.task-btn.delete {
+    color: #a13538;
+}
+.task-btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.empty-message {
+    list-style-type: none;
+    text-align: center;
+    color: #888;
+}
+
+select {
+    border: none;
+    background-color: inherit;
+    color: rgb(255, 140, 0);
+    font-size: inherit;
+}
+
+select:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

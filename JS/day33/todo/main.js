@@ -263,8 +263,6 @@ function renderTasks(data) {
 function filterStatus(statusKey) {
     getAPI((data) => {
         const filteredTasks = data.filter((task) => {
-            // console.log(task);
-
             const name = "status" + task.id;
             const status = JSON.parse(localStorage.getItem(name)) ?? "todo";
             return status === statusKey;

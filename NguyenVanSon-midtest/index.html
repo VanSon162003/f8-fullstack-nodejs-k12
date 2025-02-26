@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            li {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                border: 1px solid #ccc;
+            }
+
+            ul {
+                padding: 0;
+                width: 500px;
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" id="form_student">
+            <input type="text" name="name" placeholder="nhập họ tên or tìm" />
+
+            <input type="text" name="math" placeholder="nhập điểm toán" />
+            <input
+                type="text"
+                name="english"
+                placeholder="nhập điểm tiếng anh"
+            />
+            <input
+                type="text"
+                name="science"
+                placeholder="nhập điểm toán khoa học"
+            />
+            <button>tạo</button>
+            <button id="srach">tìm kiếm</button>
+        </form>
+
+        <ul id="render_student">
+            <!-- <li>
+                <span>họ tên</span>
+                <span>điểm toán</span>
+                <span>điểm anh</span>
+                <span>điểm khoa</span>
+                <span>tổng điểm</span>
+                <span>xoá</span>
+                <span>sửa</span>
+            </li> -->
+        </ul>
+
+        <script src="./main.js"></script>
+    </body>
+</html>

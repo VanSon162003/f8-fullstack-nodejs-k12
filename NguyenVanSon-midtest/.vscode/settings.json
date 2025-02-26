@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.ignoreFiles": [
+        "**/db.json",
+        "**/config.json",
+        "db.json"
+    ]
+}
