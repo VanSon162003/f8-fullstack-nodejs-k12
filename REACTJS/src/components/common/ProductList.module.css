@@ -1,0 +1,14 @@
+.productList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.posture {
+    color: red;
+}
+
+.productList.posture {
+    display: flex;
+    color: red;
+}

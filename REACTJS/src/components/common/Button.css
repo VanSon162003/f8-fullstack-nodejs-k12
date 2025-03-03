@@ -1,0 +1,34 @@
+.btn {
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn.btn-link {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn.btn-small {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.btn.btn-medium {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.btn.btn-big {
+    padding: 15px 30px;
+    font-size: 16px;
+}
